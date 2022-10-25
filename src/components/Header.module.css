@@ -22,3 +22,35 @@
   font-weight: bold;
   color: var(--purpleDark);
 }
+
+.taskbar {
+  display: flex;
+  position: absolute;
+  top: 10.875rem;
+}
+
+.buttonNewTask {
+  border-radius: 8px;
+  width: 5.625rem;
+  height: 52px;
+  background-color: var(--blueDark);
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  color: var(--gray-100);
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.inputNewTask {
+  height: 54px;
+  width: 46rem;
+  border-radius: 8px;
+  border: solid 1px var(--gray-700);
+  padding: 1rem;
+  color: var(--gray-300);
+  background-color: var(--gray-500);
+}
