@@ -1,0 +1,54 @@
+.newTask {
+  display: flex;
+  align-items: center;
+  background-color: var(--gray-500);
+  border-radius: 8px;
+  border: 1px solid var(--gray-400);
+}
+
+.inputTask {
+  display: block;
+  justify-items: center;
+}
+
+.round input {
+  appearance: none;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background-color: var(--gray-600);
+  border: 2px solid var(--blue);
+  cursor: pointer;
+  outline: none;
+  margin: 16px 0 32px 16px;
+}
+
+.round input:checked {
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background-color: var(--purpleDark);
+  border: 2px solid var(--purpleDark);
+  cursor: pointer;
+}
+
+.newTask p {
+  display: flex;
+  font-size: 0.875rem;
+  color: var(--gray-100);
+  margin: 16px 12px 16px 12px;
+  line-height: 1.2rem;
+}
+
+.newTask button {
+  background-color: transparent;
+  border: 0;
+  color: var(--gray-300);
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 16px 16px 32px 0;
+}
+
+.newTask button:hover {
+  color: var(--danger);
+}

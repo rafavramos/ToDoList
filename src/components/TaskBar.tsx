@@ -1,4 +1,5 @@
 import styles from './TaskBar.module.css'
+import NewTask from './NewTask'
 import { ClipboardText } from 'phosphor-react'
 
 export default function TaskBar() {
@@ -14,6 +15,7 @@ export default function TaskBar() {
       </header>
       <article className={styles.taskBoard}>
         <div className={styles.taskBoardEmpty}>
+          <NewTask />
           <div className={styles.ClipboardText}>
             <ClipboardText size={100} color="var(--gray-400)" weight="light" />
           </div>
