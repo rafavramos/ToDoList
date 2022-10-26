@@ -45,6 +45,10 @@
   border: none;
 }
 
+.buttonNewTask:active {
+  transform: scale(0.95);
+}
+
 .inputNewTask {
   height: 54px;
   width: 46rem;
@@ -53,4 +57,9 @@
   padding: 1rem;
   color: var(--gray-300);
   background-color: var(--gray-500);
+}
+
+.inputNewTask:focus {
+  border-color: var(--purpleDark);
+  color: var(--gray-100);
 }
