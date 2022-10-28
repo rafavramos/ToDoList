@@ -1,8 +1,12 @@
 import styles from './TaskBar.module.css'
+import { useState } from 'react'
 import NewTask from './NewTask'
 import { ClipboardText } from 'phosphor-react'
 
 export default function TaskBar() {
+  const [tasks, setTasks] = useState([])
+  const [active, setActive] = useState(true)
+
   return (
     <>
       <header className={styles.header}>
@@ -14,16 +18,23 @@ export default function TaskBar() {
         </div>
       </header>
       <article className={styles.taskBoard}>
-        <div className={styles.taskBoardEmpty}>
-          <NewTask />
-          <div className={styles.ClipboardText}>
-            <ClipboardText size={100} color="var(--gray-400)" weight="light" />
+        {active === false && (
+          <div className={styles.taskBoardEmpty}>
+            <div className={styles.ClipboardText}>
+              <ClipboardText
+                size={100}
+                color="var(--gray-400)"
+                weight="light"
+              />
+            </div>
+            <p className={styles.p1}>Você ainda não tem tarefas cadastradas</p>
+            <p className={styles.p2}>
+              Crie tarefas e organize seus itens a fazer
+            </p>
           </div>
-          <p className={styles.p1}>Você ainda não tem tarefas cadastradas</p>
-          <p className={styles.p2}>
-            Crie tarefas e organize seus itens a fazer
-          </p>
-        </div>
+        )}
+        <NewTask content="adasdasd" />
+        <NewTask content="adasdasd" />
       </article>
     </>
   )

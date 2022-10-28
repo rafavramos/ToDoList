@@ -1,9 +1,12 @@
 .newTask {
+  width: 46rem;
   display: flex;
   align-items: center;
   background-color: var(--gray-500);
   border-radius: 8px;
   border: 1px solid var(--gray-400);
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
 }
 
 .inputTask {

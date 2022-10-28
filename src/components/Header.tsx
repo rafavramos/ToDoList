@@ -1,10 +1,17 @@
 import styles from './Header.module.css'
+import { useState } from 'react'
 import logo from '../assets/rocket.svg'
 import { PlusCircle } from 'phosphor-react'
 
 export default function Header() {
+  const [newTaskText, setNewTaskText] = useState('')
+
+  function handleNewTaskChange(event: { target: HTMLInputElement }) {
+    setNewTaskText(event.target.value)
+  }
+
   const handleClick = () => {
-    console.log('Clicou')
+    setNewTaskText('')
   }
 
   return (
@@ -16,6 +23,8 @@ export default function Header() {
       </div>
       <div className={styles.taskbar}>
         <input
+          onChange={handleNewTaskChange}
+          value={newTaskText}
           type="text"
           className={styles.inputNewTask}
           placeholder="Adicione uma nova tarefa"

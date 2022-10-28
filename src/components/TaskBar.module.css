@@ -31,7 +31,7 @@
 .taskBoard {
   height: 15.25rem;
   width: 46rem;
-  display: flex;
+  display: block;
   border-radius: 8px;
   border-top: 2px solid var(--gray-400);
   justify-content: center;
