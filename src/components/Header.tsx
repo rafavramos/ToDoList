@@ -3,7 +3,7 @@ import { useState } from 'react'
 import logo from '../assets/rocket.svg'
 import { PlusCircle } from 'phosphor-react'
 
-export default function Header() {
+export default function Header({ activeTaskBoard }: { activeTaskBoard: any }) {
   const [newTaskText, setNewTaskText] = useState('')
 
   function handleNewTaskChange(event: { target: HTMLInputElement }) {
@@ -11,6 +11,7 @@ export default function Header() {
   }
 
   const handleClick = () => {
+    activeTaskBoard(newTaskText)
     setNewTaskText('')
   }
 
