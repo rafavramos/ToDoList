@@ -3,7 +3,6 @@ import './global.css'
 import Header from './components/Header'
 import TaskBar from './components/TaskBar'
 import { useState } from 'react'
-import { List } from 'phosphor-react'
 
 function App() {
   const [tasks, setTasks] = useState([])
@@ -13,10 +12,17 @@ function App() {
     setTasks(list)
   }
 
+  const deleteTask = (taskTodelete: string) => {
+    const newTaskListWithoutDeletedOne = tasks.filter(task => {
+      return task !== taskTodelete
+    })
+    setTasks(newTaskListWithoutDeletedOne)
+  }
+
   return (
     <div className="App">
       <Header activeTaskBoard={handlelistData} />
-      <TaskBar data={tasks} />
+      <TaskBar data={tasks} taskTodelete={deleteTask}/>
     </div>
   )
 }
