@@ -10,7 +10,7 @@ export default function TaskBar({ data, taskTodelete}: { data: any, taskTodelete
 
   useEffect(() => {
     data.length > 0 ? setActive(true) : false
-    setCountDone(listChecked.filter( check => check === false).length)   
+    setCountDone(listChecked.filter( check => check === false).length)  
   })
 
   const onDeleteTask = (data: any) => {

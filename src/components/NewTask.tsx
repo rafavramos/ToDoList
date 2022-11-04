@@ -17,9 +17,12 @@ export default function NewTask({
     onDelete(content)
   }
 
+  const handleChangeCheck = (event: {target: HTMLInputElement}) => {
+    setChecked(event.target.checked)
+  }
+
 
   const handleCheck = () => {
-    setChecked(!checked)
     isChecked(checked)
   }
 
@@ -30,6 +33,7 @@ export default function NewTask({
           type="checkbox"
           name="checkbox"
           id="checkbox"
+          onChange={handleChangeCheck}
           onClick={handleCheck}
         />
       </div>
